@@ -123,6 +123,38 @@ const array2 = [4, 5, 6, 7, 8];
 function intersezione(array1, array2){
   // return array1.filter(numero => array2.includes(numero));
   const arrayMix = array1.filter(numero => array2.includes(numero));
-  return arrayMix
+  return arrayMix;
 }
-console.log(intersezione(array1, array2));
+// console.log(intersezione(array1, array2));
+
+// Scrivi una funzione che converta un array di coppie chiave-valore in un oggetto.
+
+const coppie = [['nome', 'Mario'], ['cognome', 'Rossi'], ['età', 30]];
+
+function arrToObj(coppie){
+  const objArr = Object.fromEntries(coppie); // Converte l'array in oggetto con le sue chiavi-valore
+  return objArr;
+}
+// console.log(arrToObj(coppie));
+
+// Hai un array di oggetti che rappresentano transazioni, ciascuno con le proprietà tipo e importo. Scrivi una funzione che calcoli la somma totale degli importi per un tipo specifico di transazione.
+
+const transazioni = [
+  { tipo: 'entrata', importo: 100 },
+  { tipo: 'uscita', importo: 50 },
+  { tipo: 'entrata', importo: 200 },
+  { tipo: 'uscita', importo: 30 },
+  { tipo: 'entrata', importo: 150 }
+];
+
+function calcolaSommaPerTipo(transazioni, tipoSpecifico){
+  const calcolo = transazioni.filter(transazione => transazione.tipo === tipoSpecifico)
+  .reduce((accumulatore, transazione) => accumulatore + transazione.importo, 0);
+  return calcolo;
+}
+
+const sommaEntrate = calcolaSommaPerTipo(transazioni, 'entrata');
+const sommaUscite = calcolaSommaPerTipo(transazioni, 'uscita');
+
+console.log(sommaEntrate);
+console.log(sommaUscite);
