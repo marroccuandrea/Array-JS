@@ -75,10 +75,26 @@ const studenti = [
 // If per controllare che i punteggi siano >= a 60
 // Creazione nuovo array con elementi filtrati
 
-function controlloVoti(studenti){
+function filtroVoti(studenti){
   return studenti.filter(studente => studente.punteggio >= 60);
 }
 
-console.log(controlloVoti(studenti));
+// console.log(filtroVoti(studenti));
 
+// Scrivi una funzione che ordini un array di oggetti in base a una proprietà specificata. Usa l'array di studenti dell'esercizio precedente e ordina gli studenti in base al punteggio in ordine decrescente.
+
+
+function ordineVoto(studenti, punteggio, ordine = 'desc'){
+  return studenti.sort((a,b) => {
+    if (a[punteggio] < b[punteggio]){
+      return ordine === 'asc' ? -1 : 1;
+    }
+    if (a[punteggio] > b[punteggio]){
+      return ordine === 'asc' ? 1 : -1;
+    }
+    return 0;
+  });
+}
+const studentiOrdinati = ordineVoto(studenti, 'punteggio', 'desc');
+console.log(studentiOrdinati);
 
