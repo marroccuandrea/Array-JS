@@ -96,5 +96,33 @@ function ordineVoto(studenti, punteggio, ordine = 'desc'){
   });
 }
 const studentiOrdinati = ordineVoto(studenti, 'punteggio', 'desc');
-console.log(studentiOrdinati);
+// console.log(studentiOrdinati);
 
+// Hai un array di oggetti che rappresentano prodotti, ognuno con proprietà nome e categoria. Scrivi una funzione che raggruppi i prodotti per categoria.
+
+const prodotti = [
+  { nome: 'Mela', categoria: 'Frutta' },
+  { nome: 'Carota', categoria: 'Verdura' },
+  { nome: 'Banana', categoria: 'Frutta' },
+  { nome: 'Broccoli', categoria: 'Verdura' },
+  { nome: 'Arancia', categoria: 'Frutta' }
+];
+
+function prodottiGroup(prodotti){
+  const prodottiRaggruppati = Object.groupBy(prodotti, ({categoria}) => categoria);
+  return prodottiRaggruppati;
+}
+
+// console.log(prodottiGroup(prodotti));
+
+// Scrivi una funzione che prenda due array e restituisca un nuovo array contenente gli elementi che sono presenti in entrambi gli array (intersezione).
+
+const array1 = [1, 2, 3, 4, 5];
+const array2 = [4, 5, 6, 7, 8];
+
+function intersezione(array1, array2){
+  // return array1.filter(numero => array2.includes(numero));
+  const arrayMix = array1.filter(numero => array2.includes(numero));
+  return arrayMix
+}
+console.log(intersezione(array1, array2));
