@@ -174,4 +174,28 @@ function evenNumbers(numbers){
  
 }
 
-console.log(evenNumbers(numbers));
+// console.log(evenNumbers(numbers));
+
+
+// Dato un array di numeri, scrivi una funzione che trovi e restituisca il primo numero che è maggiore di 10.
+
+const numeri4 = [3, 7, 12, 5, 20];
+
+function numFinder(numeri4){
+  return numeri4.find(num => num > 10);
+}
+// console.log(numFinder(numeri4));
+
+// Hai un array di oggetti che rappresentano persone, ciascuno con proprietà nome e età. Scrivi una funzione che restituisca un array contenente solo i nomi delle persone.
+
+const persone = [
+  { nome: 'Alice', età: 25 },
+  { nome: 'Bob', età: 30 },
+  { nome: 'Charlie', età: 35 }
+];
+
+function names(persone){
+  return persone.map(persona => persona.nome);
+}
+
+console.log(names(persone));
