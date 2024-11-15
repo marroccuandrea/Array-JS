@@ -223,4 +223,22 @@ function proprCount(auto){
   return Object.keys(auto).length;
 
 }
-console.log(proprCount(auto));
+// console.log(proprCount(auto));
+
+
+// Hai un array di oggetti che rappresentano libri, ciascuno con proprietà titolo e autore. Scrivi una funzione che aggiunga una nuova proprietà disponibile impostata a true a ogni libro.
+
+const libri = [
+  { titolo: 'Il Signore degli Anelli', autore: 'J.R.R. Tolkien' },
+  { titolo: '1984', autore: 'George Orwell' },
+  { titolo: 'Il Piccolo Principe', autore: 'Antoine de Saint-Exupéry' }
+];
+
+
+function addPropr(libri){
+  libri.forEach(function(libro)  {
+    libro.disponibile = true; // Aggiungo una proprietà ed una value
+  });
+  return libri;
+}
+console.log(addPropr(libri));
