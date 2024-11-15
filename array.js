@@ -156,5 +156,22 @@ function calcolaSommaPerTipo(transazioni, tipoSpecifico){
 const sommaEntrate = calcolaSommaPerTipo(transazioni, 'entrata');
 const sommaUscite = calcolaSommaPerTipo(transazioni, 'uscita');
 
-console.log(sommaEntrate);
-console.log(sommaUscite);
+// console.log(sommaEntrate);
+// console.log(sommaUscite);
+
+// Scrivi una funzione che verifichi se tutti gli elementi di un array di numeri sono pari.
+
+const numbers = [2, 4, 6, 8];
+
+function evenNumbers(numbers){
+  for (let i = 0; i < numbers.length; i++){
+    if (numbers[i] % 2 === 0){
+      return true;
+    } else {
+      return false
+    }
+  }
+ 
+}
+
+console.log(evenNumbers(numbers));
