@@ -198,4 +198,29 @@ function names(persone){
   return persone.map(persona => persona.nome);
 }
 
-console.log(names(persone));
+// console.log(names(persone));
+
+// Scrivi una funzione che prenda un array di array e restituisca un unico array con tutti gli elementi concatenati.
+
+const arrayDiArray = [[1, 2], [3, 4], [5, 6]];
+
+function concatena(arrayDiArray){
+  return arrayDiArray.flat();
+}
+// console.log(concatena(arrayDiArray));
+
+
+// Scrivi una funzione che prenda un oggetto e restituisca il numero di proprietà che contiene.
+
+const auto = {
+  marca: 'Fiat',
+  modello: '500',
+  anno: 2020
+};
+
+function proprCount(auto){
+  
+  return Object.keys(auto).length;
+
+}
+console.log(proprCount(auto));
