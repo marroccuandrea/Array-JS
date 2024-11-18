@@ -269,6 +269,20 @@ function numMedia(numeri6){
   return media;
 }
 
-console.log(numMedia(numeri6));
+// console.log(numMedia(numeri6));
+
+// Scrivi una funzione che prenda un oggetto e restituisca un array delle sue chiavi ordinate in ordine alfabetico.
 
 
+const dati = {
+  nome: 'Luca',
+  età: 28,
+  professione: 'Ingegnere'
+};
+
+
+function keyOrder(dati){
+  return Object.keys(dati).sort();
+}
+
+// console.log(keyOrder(dati));
