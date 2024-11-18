@@ -241,4 +241,16 @@ function addPropr(libri){
   });
   return libri;
 }
-console.log(addPropr(libri));
+// console.log(addPropr(libri));
+
+
+// Scrivi una funzione che prenda un array di numeri e restituisca un nuovo array contenente solo i numeri pari maggiori di 10.
+
+const numeri5 = [4, 11, 16, 7, 20, 3];
+
+function arrChange(numeri5){
+  const newArray = numeri5.filter(numero => numero % 2 === 0 && numero > 10);
+  return newArray;
+}
+
+console.log(arrChange(numeri5));
