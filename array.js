@@ -253,4 +253,22 @@ function arrChange(numeri5){
   return newArray;
 }
 
-console.log(arrChange(numeri5));
+// console.log(arrChange(numeri5));
+
+
+// Scrivi una funzione che calcoli la media dei numeri in un array.
+
+const numeri6 = [10, 20, 30, 40, 50];
+
+function numMedia(numeri6){
+  let somma = 0;
+  for (let i = 0; i < numeri6.length; i++){
+    somma = somma + numeri6[i];
+  }
+  const media = somma / numeri6.length;
+  return media;
+}
+
+console.log(numMedia(numeri6));
+
+
