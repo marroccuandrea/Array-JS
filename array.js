@@ -286,3 +286,18 @@ function keyOrder(dati){
 }
 
 // console.log(keyOrder(dati));
+
+
+// Scrivi una funzione che verifichi se un array di numeri o stringhe è palindromo (si legge allo stesso modo in avanti e indietro).
+
+const array3 = [1, 2, 3, 2, 1];
+
+const array4 = ['a', 'b', 'c'];
+
+function palindro(array4){
+  let parola = array4.toString();
+  let reverseParola = parola.split('').reverse().join('');
+
+  return reverseParola === parola;
+}
+console.log(palindro(array4));
