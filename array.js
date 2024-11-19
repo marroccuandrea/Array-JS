@@ -300,4 +300,24 @@ function palindro(array4){
 
   return reverseParola === parola;
 }
-console.log(palindro(array4));
+// console.log(palindro(array4));
+
+
+// Scrivi una funzione che prenda due array di uguale lunghezza e restituisca un nuovo array in cui gli elementi sono alternati dai due array di input.
+
+const array5 = [1, 3, 5];
+const array6 = [2, 4, 6];
+
+function arrAltern(array5, array6){
+  const mixArr = [];
+  // Controllo che gli array siano della stessa lunghezza
+  if (array5.length !== array6.length){
+    throw new Error("Gli array devono avere la stessa lunghezza");
+  } else {
+    for (let i = 0; i<array5.length; i++){
+      mixArr.push(array5[i], array6[i]);
+    }
+  }
+  return mixArr;
+}
+console.log(arrAltern(array5, array6));
