@@ -345,4 +345,34 @@ const parole = ["JavaScript", "è", "un", "linguaggio", "potente"];
 function stringConcat(parole) {
   return parole.join(" ");
 }
-console.log(stringConcat(parole));
+// console.log(stringConcat(parole));
+
+// Scrivi una funzione che prenda una stringa e restituisca un oggetto che conta quante volte appare ciascuna vocale (a, e, i, o, u).
+
+const str = "Ciao come stai?";
+
+function contaVocali(str) {
+  // Definisco le vocali da contare
+  const vocali = ["a", "e", "i", "o", "u"];
+
+  // Inizializzo l'oggetto con le vocali e contatori a 0
+  const conteggio = {
+    a: 0,
+    e: 0,
+    i: 0,
+    o: 0,
+    u: 0,
+  };
+
+  // Converto la stringa in minuscolo per una comparazione case-insensitive
+  const stringaMinuscola = str.toLowerCase();
+
+  for (let char of stringaMinuscola) {
+    if (vocali.includes(char)) {
+      conteggio[char]++;
+    }
+  }
+
+  return conteggio;
+}
+console.log(contaVocali(str));
