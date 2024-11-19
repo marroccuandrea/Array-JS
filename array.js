@@ -336,4 +336,13 @@ function keyRemover(obj1, keys) {
   return obj1;
 }
 
-console.log(keyRemover(obj1, keysToRemove));
+// console.log(keyRemover(obj1, keysToRemove));
+
+// Scrivi una funzione che prenda un array di parole e le concateni in una frase completa.
+
+const parole = ["JavaScript", "è", "un", "linguaggio", "potente"];
+
+function stringConcat(parole) {
+  return parole.join(" ");
+}
+console.log(stringConcat(parole));
